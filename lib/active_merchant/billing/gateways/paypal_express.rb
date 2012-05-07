@@ -7,6 +7,7 @@ module ActiveMerchant #:nodoc:
     class PaypalExpressGateway < Gateway
       include PaypalCommonAPI
       include PaypalExpressCommon
+      include PaypalRecurringApi
       
       self.test_redirect_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr'
       self.supported_countries = ['US']
